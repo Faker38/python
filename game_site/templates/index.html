@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>井字棋 - Flask 游戏站</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>井字棋</h1>
+      <nav>
+        <a href="/">首页</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="game-panel">
+        <div class="status">
+          <span id="statusText">轮到 X</span>
+          <button id="resetBtn" type="button">重开一局</button>
+        </div>
+        <div id="board" class="board" aria-label="井字棋棋盘" role="grid">
+          <button class="cell" data-idx="0" role="gridcell" aria-label="格子 1"></button>
+          <button class="cell" data-idx="1" role="gridcell" aria-label="格子 2"></button>
+          <button class="cell" data-idx="2" role="gridcell" aria-label="格子 3"></button>
+          <button class="cell" data-idx="3" role="gridcell" aria-label="格子 4"></button>
+          <button class="cell" data-idx="4" role="gridcell" aria-label="格子 5"></button>
+          <button class="cell" data-idx="5" role="gridcell" aria-label="格子 6"></button>
+          <button class="cell" data-idx="6" role="gridcell" aria-label="格子 7"></button>
+          <button class="cell" data-idx="7" role="gridcell" aria-label="格子 8"></button>
+          <button class="cell" data-idx="8" role="gridcell" aria-label="格子 9"></button>
+        </div>
+      </section>
+
+      <section class="scores-panel">
+        <h2>最近战绩</h2>
+        <ul id="scoresList" class="scores"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>Powered by Flask</small>
+    </footer>
+
+    <script src="/static/js/game.js"></script>
+  </body>
+  </html>
+
